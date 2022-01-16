@@ -31,7 +31,7 @@ setup(
         Extension(
             '_xdelta3',
             sources=['xdelta3/_xdelta3.c'],
-            include_dirs=['./xdelta3/lib'],
+            include_dirs=['./xdelta/xdelta3'],
             # use with SECONDARY_LZMA to enabled secondary compression with lzma
             # libraries=['lzma'],
             define_macros=[
