@@ -4,8 +4,7 @@ import sys
 
 from xdelta3.version import VERSION
 
-git_tag = os.getenv('TRAVIS_TAG')
-if git_tag:
+if git_tag := os.getenv('TRAVIS_TAG'):
     if git_tag.lower().lstrip('v') != str(VERSION).lower():
         print('✖ "TRAVIS_TAG" environment variable does not match package version: "%s" vs. "%s"' % (git_tag, VERSION))
         sys.exit(1)

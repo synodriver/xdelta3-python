@@ -11,7 +11,7 @@ version = SourceFileLoader('version', 'xdelta3/version.py').load_module()
 package = THIS_DIR.joinpath('xdelta3')
 package_data = ['_xdelta3.c']
 if package.joinpath('lib').exists():
-    package_data += ['lib/' + f.name for f in package.joinpath('lib').iterdir()]
+    package_data += [f'lib/{f.name}' for f in package.joinpath('lib').iterdir()]
 
 setup(
     name='xdelta3',
